@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   body {
@@ -15,4 +16,79 @@
     width: 300px;
     height: 600px;
     background: #D8CBB5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 24px;
+    position: relative;
+    overflow: hidden; 
   }
+
+  .logo {
+    margin-bottom: 24px;
+  }
+
+  .product-img {
+    height: 300px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-button {
+    background-color: #61BDAB;
+    border: none;
+    border-radius: 4px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .arrow {
+    font-size: 1.5em;
+  }
+
+  .features {
+    list-style-type: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-align: left;            
+    width: fit-content;          
+    margin: 0 auto;              
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .plus {
+    color: #61BDAB;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .bottom-circle {
+    width: 500px;
+    height: 315px;
+    background-color: #213F3A;
+    border-top-left-radius: 372px;
+    border-top-right-radius: 372px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
+  

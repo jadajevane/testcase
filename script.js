@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 window.addEventListener("DOMContentLoaded", () => {
   gsap.set(".features li", {
     opacity: 0,
-    y: 30,
+    y: 40,
   });
 
   gsap.set(".cta-button", { opacity: 1, scale: 1 });
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
       ".features li",
       {
         opacity: 1,
-        y: 20,
+        y: 10,
         duration: 1,
         stagger: 0.7,
         ease: "power3.out",

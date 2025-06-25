@@ -1,70 +1,44 @@
 import { gsap } from "gsap";
 
+window.addEventListener("DOMContentLoaded", () => {
+  gsap.set(".features li", {
+    opacity: 0,
+    y: 30,
+  });
 
+  gsap.set(".cta-button", { opacity: 1, scale: 1 });
 
-// const variants = [
-//   {
-//     logo: "Header_neutraal.png",
-//     img: "Neutraal.png",
-//     bottom_circle: "#1C2732",
-//     text: {
-//       features: [
-//         { icon: "+", color: "#5BA9E6", text: "Ondersteunt sterke botten" },
-//         { icon: "+", color: "#5BA9E6", text: "Natuurlijk glanzend haar" },
-//         { icon: "+", color: "#5BA9E6", text: "Gemaakt in Nederland" },
-//       ],
-//       cta: {
-//         text: "Probeer nu",
-//         color: "#5BA9E6",
-//       },
-//     },
-//   },
-//   {
-//     logo: "Header_neutraal.png",
-//     img: "Neutraal.png",
-//     bottom_circle: "#1C2732",
-//     text: {
-//       features: [
-//         { icon: "+", color: "#5BA9E6", text: "Ondersteunt sterke botten" },
-//         { icon: "+", color: "#5BA9E6", text: "Natuurlijk glanzend haar" },
-//         { icon: "+", color: "#5BA9E6", text: "Gemaakt in Nederland" },
-//       ],
-//       cta: {
-//         text: "Probeer nu",
-//         color: "#5BA9E6",
-//       },
-//     },
-//   },
-//   {
-//     logo: "Header_vanille_kokos.png",
-//     img: "Vanille_kokos.png",
-//     bottom_circle: "#1C2732",
-//     text: {
-//       features: [
-//         { icon: "+", color: "#5BA9E6", text: "Ondersteunt sterke botten" },
-//         { icon: "+", color: "#5BA9E6", text: "Natuurlijk glanzend haar" },
-//         { icon: "+", color: "#5BA9E6", text: "Gemaakt in Nederland" },
-//       ],
-//       cta: {
-//         text: "Probeer nu",
-//         color: "#5BA9E6",
-//       },
-//     },
-//   },
-//   {
-//     logo: "Header_cacao.png",
-//     img: "Cacao.png",
-//     bottom_circle: "#4A3526",
-//     text: {
-//       features: [
-//         { icon: "+", color: "#C07B4A", text: "Ondersteunt sterke botten" },
-//         { icon: "+", color: "#C07B4A", text: "Natuurlijk glanzend haar" },
-//         { icon: "+", color: "#C07B4A", text: "Gemaakt in Nederland" },
-//       ],
-//       cta: {
-//         text: "Probeer nu",
-//         color: "#C07B4A",
-//       },
-//     },
-//   },
-// ];
+  const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+  tl.from(".main-content > :not(.features)", {
+    y: 40,
+    scale: 0.7,
+    opacity: 0,
+    duration: 1.2,
+    stagger: 0.1,
+  })
+
+    .to(
+      ".features li",
+      {
+        opacity: 1,
+        y: 20,
+        duration: 1,
+        stagger: 0.7,
+        ease: "power3.out",
+      },
+      "+=0.3"
+    )
+
+    .to(
+      ".cta-button",
+      {
+        scale: 1.1,
+        duration: 0.6,
+        yoyo: true,
+        repeat: 1,
+        ease: "power1.inOut",
+      },
+      "+=0.2"
+    );
+});

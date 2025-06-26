@@ -1,5 +1,10 @@
 # testcase
 
+Clone the repository:
+```
+git clone git@github.com:jadajevane/testcase.git
+```
+
 ## How to run
 
 1. Install dependencies:

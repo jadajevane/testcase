@@ -1,6 +1,6 @@
 # testcase
 
-Clone the repository:
+Clone repository:
 ```
 git clone git@github.com:jadajevane/testcase.git
 ```
